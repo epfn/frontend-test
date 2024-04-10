@@ -1,0 +1,100 @@
+@font-face {
+  font-family: "PF Agora Sans Pro";
+  src: url(../fonts/PFAgoraSansProRegular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "PF Agora Sans Pro";
+  src: url(../fonts/PFAgoraSansProMedium.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "PF Agora Sans Pro";
+  src: url(../fonts/PFAgoraSansProBold.ttf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "PF Agora Sans Pro";
+  src: url(../fonts/PFAgoraSansProBlack.ttf);
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "PF Agora Sans Pro";
+  src: url(../fonts/PFAgoraSansProUltraBlack.ttf);
+  font-weight: 900;
+}
+
+:root {
+  --global-padding: 0.75rem;
+  --global-container-width: 1230px;
+  --global-header-height: 64px;
+  --accent-color: #e01e2e;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --global-header-height: 120px;
+  }
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: grid;
+  font-family: "PF Agora Sans Pro", sans-serif;
+}
+
+.main {
+  display: grid;
+  grid-template-rows: min(100%, 100vh) repeat(2, auto);
+  gap: 4rem;
+}
+
+.chart-container {
+  margin-inline: auto;
+
+  @media (min-width: 1200px) {
+    margin: unset;
+  }
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 4rem;
+  cursor: pointer;
+}
+
+.swiper-slide {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-pagination {
+  --swiper-pagination-color: var(--accent-color);
+  --swiper-pagination-bullet-width: 14px;
+  --swiper-pagination-bullet-height: 14px;
+  --swiper-pagination-bullet-horizontal-gap: 8px;
+}
+
+.swiper-pagination-bullet {
+  --swiper-pagination-bullet-inactive-color: transparent;
+  outline: 1px solid var(--swiper-pagination-color);
+  outline-offset: 1px;
+}

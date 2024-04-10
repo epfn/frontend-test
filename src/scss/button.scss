@@ -1,0 +1,34 @@
+.button {
+  background-color: var(--_bg, black);
+  color: var(--_text, white);
+
+  &:hover {
+    background-color: color-mix(in srgb, var(--_bg) 90%, black);
+    transition: all 0.25s;
+
+    &:active {
+      background-color: color-mix(in srgb, var(--_bg) 95%, white);
+    }
+  }
+
+  &--accent {
+    --_bg: var(--accent-color);
+  }
+
+  &--large {
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+
+    @media (min-width: 768px) {
+      border-radius: 10px;
+      padding: 0.75rem 1.5rem;
+    }
+
+    @media (min-width: 1200px) {
+      padding: 1rem 3.5rem;
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+}

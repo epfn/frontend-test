@@ -1,0 +1,99 @@
+.charts {
+  display: grid;
+  grid-template-rows: [container] auto [container];
+  grid-template-columns:
+    minmax(var(--global-padding), 1fr)
+    [container-start] minmax(auto, var(--global-container-width))
+    [container-end]
+    minmax(var(--global-padding), 1fr);
+  align-items: center;
+
+  padding: 4rem 0rem;
+
+  @media (min-width: 1200px) {
+  }
+
+  &__container {
+    grid-area: container;
+    display: grid;
+    align-items: center;
+    gap: 6rem;
+    justify-content: center;
+
+    @media (min-width: 1200px) {
+      grid-template-columns: 1fr 1fr;
+      align-items: unset;
+      gap: unset;
+    }
+  }
+
+  &__button {
+    margin-inline: auto;
+  }
+}
+
+.title--red {
+  position: relative;
+  font-weight: 900;
+  size: 20px;
+
+  @media (min-width: 768px) {
+    margin-inline: auto;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 24px;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 32px;
+    margin: unset;
+  }
+
+  &::before {
+    position: absolute;
+    top: -1em;
+    left: 0;
+    content: "";
+    height: 8px;
+    width: 75px;
+    background-color: var(--accent-color);
+  }
+}
+
+.stack {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-rows: min-content;
+  max-width: 550px;
+  grid-auto-rows: max-content;
+
+  @media (min-width: 1200px) {
+    gap: 3rem;
+    max-width: unset;
+  }
+}
+
+.person {
+  display: grid;
+  grid-template: 1fr/1fr;
+  justify-items: center;
+
+  &__image,
+  &__student {
+    grid-area: 1/1/-1/-1;
+  }
+
+  &__student {
+    height: 80%;
+    width: 85%;
+    object-fit: scale-down;
+  }
+}
+
+@media (min-width: 600px) {
+  .chart-container,
+  .person {
+    padding-left: 1rem;
+  }
+}

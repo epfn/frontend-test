@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tailwindcss@3.4.3/src/css/preflight.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <title>Тестовое Задание</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <button class="hamburger"></button>
+        <div class="drawer">
+          <nav class="menu" title="Главное Меню">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a href="/" class="menu__link">Главная</a>
+              </li>
+              <li class="menu__item">
+                <a href="/" class="menu__link">Продукты</a>
+              </li>
+              <li class="menu__item">
+                <a href="/" class="menu__link">Кейсы</a>
+              </li>
+              <li class="menu__item">
+                <a href="/" class="menu__link">Экспертное мнение</a>
+              </li>
+              <li class="menu__item">
+                <a href="/" class="menu__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <button class="button button--large button--accent">
+          Запросить презентацию
+        </button>
+      </div>
+    </header>
+    <main class="main">
+      <div class="hero">
+        <div class="hero__container">
+          <img class="hero__image" src="./img/logo.svg" alt="логотип" />
+          <h1 class="hero__title">AI-Driven Analytics Platform</h1>
+          <div class="hero__cards">
+            <div class="card card--large">
+              <div class="card__icon">
+                <img class="card__image" src="./img/icon/data.svg" alt="icon" />
+              </div>
+              <h2 class="card__title">Обработка данных</h2>
+              <p class="card__text">
+                Мы помогаем клиентам подобрать необходимые источники данных
+                (через Pop UP нужно показать логотипы: Все ОФД, Nielsen, Едадил,
+                СкидкиОнлайн). Валидируем и верифицируем их. Приводим их к
+                единому формату и классификатору.
+              </p>
+            </div>
+            <div class="card card--small">
+              <div class="card__icon">
+                <img class="card__image" src="./img/icon/tree.svg" alt="icon" />
+              </div>
+              <h2 class="card__title">Анализ</h2>
+            </div>
+            <div class="card card--small">
+              <div class="card__icon">
+                <img
+                  class="card__image"
+                  src="./img/icon/place.svg"
+                  alt="icon"
+                />
+              </div>
+              <h2 class="card__title">Визуализация</h2>
+            </div>
+            <div class="card card--small">
+              <div class="card__icon">
+                <img class="card__image" src="./img/icon/comp.svg" alt="icon" />
+              </div>
+              <h2 class="card__title">Интерпретация</h2>
+            </div>
+          </div>
+        </div>
+        <div class="hero__wave"></div>
+      </div>
+      <div class="charts">
+        <div class="charts__container">
+          <div class="stack">
+            <h2 class="title--red">
+              Промо-давление <br />
+              увеличивается
+            </h2>
+            <div
+              class="chart-container"
+              style="
+                position: relative;
+                height: auto;
+                width: 80vw;
+                max-width: 550px;
+              "
+            >
+              <canvas id="myChart"></canvas>
+            </div>
+
+            <button class="charts__button button button--accent button--large">
+              Почему увеличивается?
+            </button>
+          </div>
+          <div class="stack">
+            <h2 class="title--red">
+              80% данных не используется <br />
+              производителями
+            </h2>
+            <div class="person">
+              <img
+                src="./img/circles.png"
+                alt="маркетолог"
+                class="person__image"
+              />
+              <img
+                src="./img/student.png"
+                alt="студент"
+                class="person__student"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data">
+        <div class="data__container">
+          <h2 class="title--red">
+            Собираем и обрабатываем <br />
+            гранулярные данные на уровне сети
+          </h2>
+
+          <!-- Slider main container -->
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="data__content">
+                  <div class="data__column">
+                    <h3 class="data__title" data-count="1">Обработка данных</h3>
+                    <div class="data__points">
+                      <div class="point">
+                        <div class="point__icon">
+                          <img
+                            class="point__image"
+                            src="./img/icon/tree.svg"
+                            alt="icon"
+                          />
+                        </div>
+                        <p class="point__text">
+                          Мы используем точные алгоритмы и машинное обучение
+                        </p>
+                      </div>
+                      <div class="point">
+                        <div class="point__icon">
+                          <img
+                            class="point__image"
+                            src="./img/icon/data.svg"
+                            alt="icon"
+                          />
+                        </div>
+                        <p class="point__text">
+                          Консолидируем, проверяем, визуализируем и
+                          интерпретируем информацию.
+                        </p>
+                      </div>
+                      <div class="point">
+                        <div class="point__icon">
+                          <img
+                            class="point__image"
+                            src="./img/icon/case.svg"
+                            alt="icon"
+                          />
+                        </div>
+                        <p class="point__text">
+                          Разрабатываем рекомендации для эффективной
+                          промо-стратегии и тактических решений
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="data__column">
+                    <h3 class="data__title" data-count="2">
+                      Преобразование данных
+                    </h3>
+                    <div class="data__mutations">
+                      <div class="mutation__title">Ежемесячные</div>
+                      <div class="mutation__arrow"></div>
+                      <div class="mutation__title">Еженедельные</div>
+
+                      <div class="mutation__title">Сырые данные</div>
+                      <div class="mutation__arrow"></div>
+                      <div class="mutation__title">Промо/регулярные</div>
+
+                      <div class="mutation__title">
+                        Промо/ <br />
+                        регулярные
+                      </div>
+                      <div class="mutation__arrow"></div>
+                      <div class="mutation__title">
+                        Базовые/ <br />
+                        Инкрементальные
+                      </div>
+
+                      <div class="mutation__title">Дистрибуция</div>
+                      <div class="mutation__arrow"></div>
+                      <div class="mutation__title">Конкретное окружение</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="data__content">
+                  <div class="data__column">
+                    <h3 class="data__title" data-count="3">Обработка данных</h3>
+                    <div class="data__points">
+                      <div class="point">
+                        <div class="point__icon">
+                          <img
+                            class="point__image"
+                            src="./img/icon/tree.svg"
+                            alt="icon"
+                          />
+                        </div>
+                        <p class="point__text">
+                          Мы используем точные алгоритмы и машинное обучение
+                        </p>
+                      </div>
+                      <div class="point">
+                        <div class="point__icon">
+                          <img
+                            class="point__image"
+                            src="./img/icon/data.svg"
+                            alt="icon"
+                          />
+                        </div>
+                        <p class="point__text">
+                          Консолидируем, проверяем, визуализируем и
+                          интерпретируем информацию.
+                        </p>
+                      </div>
+                      <div class="point">
+                        <div class="point__icon">
+                          <img
+                            class="point__image"
+                            src="./img/icon/case.svg"
+                            alt="icon"
+                          />
+                        </div>
+                        <p class="point__text">
+                          Разрабатываем рекомендации для эффективной
+                          промо-стратегии и тактических решений
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="data__column">
+                    <h3 class="data__title" data-count="4">
+                      Преобразование данных
+                    </h3>
+                    <div class="data__mutations">
+                      <div class="mutation__title">Ежемесячные</div>
+                      <div class="mutation__arrow"></div>
+                      <div class="mutation__title">Еженедельные</div>
+
+                      <div class="mutation__title">Сырые данные</div>
+                      <div class="mutation__arrow"></div>
+                      <div class="mutation__title">Промо/регулярные</div>
+
+                      <div class="mutation__title">
+                        Промо/ <br />
+                        регулярные
+                      </div>
+                      <div class="mutation__arrow"></div>
+                      <div class="mutation__title">
+                        Базовые/ <br />
+                        Инкрементальные
+                      </div>
+
+                      <div class="mutation__title">Дистрибуция</div>
+                      <div class="mutation__arrow"></div>
+                      <div class="mutation__title">Конкретное окружение</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="data__content">
+                  <div class="data__column">
+                    <h3 class="data__title" data-count="5">Обработка данных</h3>
+                    <div class="data__points">
+                      <div class="point">
+                        <div class="point__icon">
+                          <img
+                            class="point__image"
+                            src="./img/icon/tree.svg"
+                            alt="icon"
+                          />
+                        </div>
+                        <p class="point__text">
+                          Мы используем точные алгоритмы и машинное обучение
+                        </p>
+                      </div>
+                      <div class="point">
+                        <div class="point__icon">
+                          <img
+                            class="point__image"
+                            src="./img/icon/data.svg"
+                            alt="icon"
+                          />
+                        </div>
+                        <p class="point__text">
+                          Консолидируем, проверяем, визуализируем и
+                          интерпретируем информацию.
+                        </p>
+                      </div>
+                      <div class="point">
+                        <div class="point__icon">
+                          <img
+                            class="point__image"
+                            src="./img/icon/case.svg"
+                            alt="icon"
+                          />
+                        </div>
+                        <p class="point__text">
+                          Разрабатываем рекомендации для эффективной
+                          промо-стратегии и тактических решений
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="data__column">
+                    <h3 class="data__title" data-count="6">
+                      Преобразование данных
+                    </h3>
+                    <div class="data__mutations">
+                      <div class="mutation__title">Ежемесячные</div>
+                      <div class="mutation__arrow"></div>
+                      <div class="mutation__title">Еженедельные</div>
+
+                      <div class="mutation__title">Сырые данные</div>
+                      <div class="mutation__arrow"></div>
+                      <div class="mutation__title">Промо/регулярные</div>
+
+                      <div class="mutation__title">
+                        Промо/ <br />
+                        регулярные
+                      </div>
+                      <div class="mutation__arrow"></div>
+                      <div class="mutation__title">
+                        Базовые/ <br />
+                        Инкрементальные
+                      </div>
+
+                      <div class="mutation__title">Дистрибуция</div>
+                      <div class="mutation__arrow"></div>
+                      <div class="mutation__title">Конкретное окружение</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"
+      type="text/javascript"
+    ></script>
+    <script src="js/script.min.js" type="text/javascript"></script>
+  </body>
+</html>

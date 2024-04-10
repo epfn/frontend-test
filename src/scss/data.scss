@@ -1,0 +1,135 @@
+.data {
+  padding-bottom: 8rem;
+  display: grid;
+  grid-template-rows: [container] auto [container];
+  grid-template-columns:
+    minmax(var(--global-padding), 1fr)
+    [container-start] minmax(auto, 1100px)
+    [container-end]
+    minmax(var(--global-padding), 1fr);
+
+  &__container {
+    grid-area: container;
+    display: grid;
+    gap: 2rem;
+    justify-content: center;
+    align-content: center;
+    @media (min-width: 1200px) {
+      justify-content: unset;
+      //   gap: 2rem;
+    }
+  }
+
+  &__content {
+    display: grid;
+    gap: 4rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../img/ovals.svg");
+    background-size: contain;
+    @media (min-width: 1200px) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__column {
+    display: grid;
+    gap: 2rem;
+    grid-auto-rows: max-content;
+    @media (min-width: 1200px) {
+      gap: 6rem;
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    padding-top: 2rem;
+
+    &::before {
+      position: absolute;
+      content: attr(data-count);
+      font-size: 5em;
+      color: #efefef;
+      z-index: -1;
+    }
+  }
+
+  &__points {
+    display: grid;
+    gap: 1rem;
+    max-width: 390px;
+    @media (min-width: 1200px) {
+      gap: 1.5rem;
+    }
+  }
+
+  &__mutations {
+    display: grid;
+    gap: 1rem;
+    align-items: center;
+
+    grid-template-columns: auto auto auto;
+    @media (min-width: 1200px) {
+      column-gap: 2rem;
+    }
+  }
+}
+
+.point {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  align-items: center;
+  gap: 0.5rem;
+  @media (min-width: 1200px) {
+    grid-template-columns: 74px 1fr;
+    gap: 2rem;
+  }
+
+  &__icon {
+    border-radius: 100%;
+    background-color: var(--accent-color);
+    padding: 0.5rem;
+    width: fit-content;
+
+    @media (min-width: 1200px) {
+      padding: 1.25rem;
+    }
+  }
+
+  &__image {
+    height: 16px;
+    width: 16px;
+
+    @media (min-width: 1200px) {
+      height: 36px;
+      width: 36px;
+    }
+  }
+
+  &__text {
+  }
+}
+
+.mutation {
+  &__title {
+    position: relative;
+    @media (min-width: 1200px) {
+      font-size: 32px;
+    }
+  }
+
+  &__arrow {
+    background-repeat: no-repeat;
+    height: 15px;
+    width: 20px;
+    background-position: right;
+    background-image: url('data:image/svg+xml,<svg width="41" height="15" viewBox="0 0 41 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M28 2.4641C28 0.924501 29.6667 -0.0377486 31 0.732052L40 5.9282C41.3333 6.698 41.3333 8.62251 40 9.39231L31 14.5885C29.6667 15.3583 28 14.396 28 12.8564V2.4641Z" fill="%23E01E2E"/><path d="M0 6.66016C0 5.55559 0.895431 4.66016 2 4.66016H28V10.6602H2C0.895431 10.6602 0 9.76473 0 8.66016V6.66016Z" fill="%23E01E2E"/></svg>');
+
+    @media (min-width: 600px) {
+      width: 41px;
+    }
+  }
+}
