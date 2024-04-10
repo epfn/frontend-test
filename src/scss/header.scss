@@ -20,7 +20,7 @@
 .menu {
   grid-area: nav;
   padding-inline: 1rem;
-  //   display: none;
+
   &__list {
     display: grid;
   }
@@ -59,6 +59,7 @@
     display: block;
   }
 }
+
 .hamburger {
   color: white;
   z-index: 10;

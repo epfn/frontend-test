@@ -14,19 +14,16 @@
     gap: 2rem;
     justify-content: center;
     align-content: center;
+
     @media (min-width: 1200px) {
       justify-content: unset;
-      //   gap: 2rem;
     }
   }
 
   &__content {
     display: grid;
     gap: 4rem;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-image: url("../img/ovals.svg");
-    background-size: contain;
+
     @media (min-width: 1200px) {
       grid-template-columns: 1fr 1fr;
     }
@@ -36,6 +33,7 @@
     display: grid;
     gap: 2rem;
     grid-auto-rows: max-content;
+
     @media (min-width: 1200px) {
       gap: 6rem;
     }
@@ -70,8 +68,8 @@
     display: grid;
     gap: 1rem;
     align-items: center;
-
     grid-template-columns: auto auto auto;
+
     @media (min-width: 1200px) {
       column-gap: 2rem;
     }
@@ -83,6 +81,7 @@
   grid-template-columns: 32px 1fr;
   align-items: center;
   gap: 0.5rem;
+
   @media (min-width: 1200px) {
     grid-template-columns: 74px 1fr;
     gap: 2rem;
@@ -107,9 +106,6 @@
       height: 36px;
       width: 36px;
     }
-  }
-
-  &__text {
   }
 }
 

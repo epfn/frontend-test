@@ -60,10 +60,13 @@ body {
   height: 100%;
   padding-bottom: 4rem;
   cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../img/ovals.svg);
+  background-size: contain;
 }
 
 .swiper-slide {
-  background: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -297,7 +300,7 @@ body {
   background-position: bottom;
   background-size: cover;
   background-blend-mode: overlay;
-  background-color: rgb(113, 38, 38);
+  background-color: #591a1a;
   padding: 1rem;
 }
 
@@ -392,10 +395,6 @@ body {
 .data__content {
   display: grid;
   gap: 4rem;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url("../img/ovals.svg");
-  background-size: contain;
 }
 
 .data__column {

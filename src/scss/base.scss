@@ -70,10 +70,13 @@ body {
   height: 100%;
   padding-bottom: 4rem;
   cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../img/ovals.svg);
+  background-size: contain;
 }
 
 .swiper-slide {
-  background: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
