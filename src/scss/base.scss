@@ -35,7 +35,7 @@
   --accent-color: #e01e2e;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   :root {
     --global-header-height: 120px;
   }
@@ -53,7 +53,7 @@ body {
 
 .main {
   display: grid;
-  grid-template-rows: min(100%, 100vh) repeat(2, auto);
+  grid-template-rows: minmax(100vh, 100%) repeat(2, auto);
   gap: 4rem;
 }
 
